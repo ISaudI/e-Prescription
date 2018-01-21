@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="e_priscription_v02._5.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:e_priscription_v02._5"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <Grid>
+
+            <Grid.Background>
+                <ImageBrush Stretch="Fill" ImageSource="Assets/backwallpaper.jpg" Opacity="0.5"/>
+            </Grid.Background>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="0*"/>
+            </Grid.ColumnDefinitions>
+            <GridView ScrollViewer.IsHorizontalScrollChainingEnabled="True" ScrollViewer.IsVerticalScrollChainingEnabled="True"/>
+
+            <Image x:Name="image" HorizontalAlignment="Left" Height="136" Margin="10,34,0,0" VerticalAlignment="Top" Width="133" Source="Assets/prescription.png" Stretch="Fill"/>
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="148,52,0,0" TextWrapping="Wrap" Text="e-Prescription" VerticalAlignment="Top" Height="118" Width="812" BorderBrush="#FF28A428" Background="#66FFFFFF" FontWeight="Bold" FontStyle="Italic" FontSize="36" TextAlignment="Center" CharacterSpacing="400" Foreground="#FF28A428" FontFamily="Comic Sans MS" IsReadOnly="True" SelectionHighlightColor="#FF28A428"/>
+            <RadioButton x:Name="radioDoctor" Content="Ιατρός" HorizontalAlignment="Left" Margin="231,249,0,0" VerticalAlignment="Top" Height="116" Width="491" FontSize="48" ClickMode="Press" IsChecked="True" Checked="radioDoctor_Checked"/>
+            <RadioButton x:Name="radioDrugstore" Content="Φαρμακοποιός" HorizontalAlignment="Left" Margin="231,364,0,0" VerticalAlignment="Top" Height="116" Width="491" ClickMode="Press" IsThreeState="True" FontSize="48" Checked="radioDrugstore_Checked"/>
+            <TextBox x:Name="tbLogin" HorizontalAlignment="Left" Margin="148,480,0,0" TextWrapping="Wrap" Text="Εισάγετε κωδικό" VerticalAlignment="Top" Height="100" Width="650" InputScope="Default" FontSize="48" TextAlignment="Center" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" GotFocus="tbLogin_GotFocus" TextChanged="tbLogin_TextChanged"/>
+            <Button x:Name="bLogin" Content="Είσοδος" HorizontalAlignment="Left" Margin="356,675,0,0" VerticalAlignment="Top" Height="80" Width="200" FontSize="48" Click="bLogin_Click"/>
+
+        </Grid>
+    </ScrollViewer>
+</Page>
