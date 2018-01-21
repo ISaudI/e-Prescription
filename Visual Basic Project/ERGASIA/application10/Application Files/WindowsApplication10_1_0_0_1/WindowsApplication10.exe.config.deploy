@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+        <add name="WindowsApplication10.My.MySettings.ErgasiaConnectionString"
+            connectionString="Data Source=83.212.99.45,1433;Initial Catalog=Ergasia;User ID=vissas;Password=1T33w5Yrez3"
+            providerName="System.Data.SqlClient" />
+    </connectionStrings>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+</configuration>
