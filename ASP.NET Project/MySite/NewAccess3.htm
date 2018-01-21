@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Insertion</title>
+<script type="text/javascript" language="JavaScript" >
+function AddRecord(form) {
+ var cn = new ActiveXObject("ADODB.Connection");
+        var strConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source = C:\\Users\\Administrator\\Documents\\ergasia.accdb";
+        cn.Open(strConn);
+        var rs = new ActiveXObject("ADODB.Recordset");
+        var SQL = "select * from customers where cust_id=22";
+        rs.Open(SQL, cn);
+        alert(rs(0));
+        <p>  rs.Fields("Cust_id")</p> ;
+        
+<p> test ok </p>
+}
+
+</script>
+</head>
+<body style="margin:0 auto;">
+VDI: <input type="text" id="tname" name="vdi" />
+<br />
+Staff : <input type="text" id="tpwd" name="staff" />
+<br />
+<input type="button" id="btnsbt" name="btnsbt" value="Login" onclick="AddRecord()" /><br />
+
+</body>
+</html>

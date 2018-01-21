@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Last 10 Results</title>
+    </head>
+    <body>
+        <table>
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+            $connect = mysql_connect("SNF-727428","vissas", "1T33w5Yrez3");
+            if (!$connect) {
+                die(mysql_error());
+            }
+            mysql_select_db("ergasia");
+            $results = mysql_query("SELECT * FROM dragstores LIMIT 10");
+            while($row = mysql_fetch_array($results)) {
+            ?
+<p> test <p>
+                <tr>
+                    <td><?php echo $row['Id']?></td>
+                    <td><?php echo $row['Name']?></td>
+                </tr>
+
+            <?php
+            }
+            ?>
+            </tbody>
+            </table>
+    </body>
+</html>

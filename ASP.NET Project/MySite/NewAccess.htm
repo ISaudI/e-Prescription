@@ -1,0 +1,37 @@
+<html>
+    <head>
+    <title>Import From Excel</title>
+<p> Access test <p>
+    <script>
+
+    function query()
+    {
+        var pad = "C:\\Users\\Administrator\\documents\\Ergasia.accdb";
+        var cn = new ActiveXObject("ADODB.Connection");
+        var strConn = "Provider=microsoft.ace.oledb.12.0;Data Source=" + pad;
+        cn.Open(strConn);
+        var rs = new ActiveXObject("ADODB.Recordset");
+        var SQL = "SELECT * FROM customers";
+        rs.Open(SQL, cn);
+        if(!rs.bof) 
+        {
+            rs.MoveFirst();
+            if(!rs.eof)
+            {
+                document.write("<p>" + rs.fields(1).value + ", ");
+                document.write(rs.fields(2).value + ", ");
+                document.write(rs.fields(3).value + ".</p>");
+            }
+        }
+        else
+        {
+            document.write("No data found");
+<p> no database <p>
+        }
+        rs.Close();
+        cn.Close();
+    }
+
+    </script>
+    </head>
+    </html>
